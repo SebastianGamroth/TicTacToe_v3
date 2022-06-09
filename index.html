@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="shortcut icon" loading="lazy" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+    <script src="./js/templates.js"></script>
+</head>
+
+<body onload="includeHTML()">
+
+    <div class="container">
+
+        <h1 class="headerH1">TicTacToe</h1>
+
+        <div class="gameContainer">
+
+            <div class="law d-none" id="imprint">
+                <div class="lowContent" w3-include-html="./templates/imprint.html"></div>
+            </div>
+            <div class="law d-none" id="privacy">
+                <div class="lowContent" w3-include-html="./templates/privacy.html"></div>
+            </div>
+            <div class="law d-none" id="copyright">
+                <div class="lowContent" w3-include-html="./templates/copyright.html"></div>
+            </div>
+            <a href="" class="logoBack d-none" id="logoBack">
+                <div class="containerBack"></div>
+                <img class="logoBack" src="./img/back.svg">
+            </a>
+
+            <div class="combat" id="winner">
+                <h2>Player o</h2>
+                <h2>vs</h2>
+                <h2>Player x</h2>
+            </div>
+
+            <div class="gameBox">
+
+                <a href="" class="playAgain d-none" id="playAgain">
+                    <h2>Spiel<br>wiederhollen</h2>
+                </a>
+
+                <Table id="table">
+                    <tr>
+                        <td onclick="choiseField(0,0)"><img id="field_00" src="./img/field.png"></td>
+                        <td onclick="choiseField(0,1)"><img id="field_01" src="./img/field.png"></td>
+                        <td onclick="choiseField(0,2)"><img id="field_02" src="./img/field.png"></td>
+                    </tr>
+                    <tr>
+                        <td onclick="choiseField(1,0)"><img id="field_10" src="./img/field.png"></td>
+                        <td onclick="choiseField(1,1)"><img id="field_11" src="./img/field.png"></td>
+                        <td onclick="choiseField(1,2)"><img id="field_12" src="./img/field.png"></td>
+                    </tr>
+                    <tr>
+                        <td onclick="choiseField(2,0)"><img id="field_20" src="./img/field.png"></td>
+                        <td onclick="choiseField(2,1)"><img id="field_21" src="./img/field.png"></td>
+                        <td onclick="choiseField(2,2)"><img id="field_22" src="./img/field.png"></td>
+                    </tr>
+                </Table>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <a href="" class="footerLogo">TicTacToe</a>
+            <button class="lawButton" id="law_0" onclick="imprint()">Impressum</button>
+            <button class="lawButton" id="law_1" onclick="privacy()">Datenschutz</button>
+            <button class="lawButton" id="law_2" onclick="copyright()">Copyright</button>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
